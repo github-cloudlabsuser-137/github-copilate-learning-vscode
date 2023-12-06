@@ -20,6 +20,18 @@ const MarkdownEditor = () => {
 export default MarkdownEditor;
 
 
+const reverseSentence = (sentence) => {
+    const words = sentence.split(' ');
+    const reversedWords = words.map(word => word.split('').reverse().join(''));
+    const reversedSentence = reversedWords.join(' ');
+    return reversedSentence.charAt(0).toUpperCase() + reversedSentence.slice(1);
+};
+
+const sentence = 'hello world';
+const reversedSentence = reverseSentence(sentence);
+console.log(reversedSentence);
+
+
 const data = [
         [
             { name: 'John', age: 25 },
@@ -33,4 +45,7 @@ const data = [
 const names = data.flat().map(item => item.name);
 console.log(names);
 
+
+
   
+
